@@ -1,45 +1,28 @@
 # largestOfThree.py
-# dH 2/15/23
-#
-# approved solution for Largest of Three program
-#
-# input: three integers from the user
-# processing: find the sum of the three integers and the largest of the three
-# output: largest and total
-#
-# References:
-#   https://www.w3schools.com/python/python_user_input.asp
-#   https://www.w3schools.com/python/python_conditions.asp
+# Dustin Petersen
+# 2/19/2023
 #
 #
-#
-print("\n\n This is the Largest of Three program...")
-# input three integers from the user.
-num1 = input("\nEnter your first integer: ")
-num2 = input("\nEnter your second integer: ")
-num3 = input("\nEnter your third and last integer: ")
+print("================================ Greatest of three numbers program ================================")
 
-print("num1 = " + num1 + " num2 = " + num2 + " and num3 = " + num3)
+# getting user input and casting it to integer
+num1 = int(input("Please enter the first number: "))
+num2 = int(input("Please enter the second number: "))
+num3 = int(input("Please enter the third number: "))
 
-# Find the largest
-largest = 0
+# Getting the sum of the 3 numbers and assigning to variable total.
+total = num1 + num2 + num3
 
-if num1 > num2:
-    if num1 > num3:
-        largest = num1
-    else:
-        largest = num3
-else:
-    if num2 > num3:
-        largest = num2
-    else:
-        largest = num3
+# Assigning num1 as the largest number by default
+largest = num1
 
-# output the largest
-print("The largest is " + largest)
+# Comparing numbers using if else logic statements to see which is the largest of the 3 numbers
+if num2 > largest:
+    largest = num2
 
-# find the sum
-the_sum = int(num1) + int(num2) + int(num3)
+if num3 > largest:
+    largest = num3
 
-# output the sum
-print("The sum of " + num1 + " and " + num2 + " and " + num3 + " is " + str(the_sum))
+# Printing the output back to the user
+print(f"The largest of the 3 numbers is {largest}")
+print(f"The sum of the 3 numbers is {total}")
